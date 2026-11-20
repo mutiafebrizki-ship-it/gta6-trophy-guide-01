@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA 6 Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sun" aria-hidden="true">
+  <svg viewBox="0 0 1200 260" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="sunset" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffd166"></stop>
+        <stop offset="0.55" stop-color="#ff6b4a"></stop>
+        <stop offset="1" stop-color="#c9184a"></stop>
+      </linearGradient>
+    </defs>
+    <circle cx="600" cy="150" r="110" fill="url(#sunset)"></circle>
+    <rect x="0" y="150" width="1200" height="8" fill="#1b1035"></rect>
+    <rect x="0" y="172" width="1200" height="6" fill="#1b1035"></rect>
+    <rect x="0" y="190" width="1200" height="5" fill="#1b1035"></rect>
+    <rect x="0" y="206" width="1200" height="4" fill="#1b1035"></rect>
+    <path d="M120 260 L300 120 L340 160 L470 60 L600 180 L740 90 L860 170 L1000 110 L1080 260 Z" fill="#1b1035"></path>
+  </svg>
+</div>
+<header class="hero">
+  <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Offline guide</p>
+  <h1>Leonida Legend</h1>
+  <p class="tagline">Every one of the 55 trophies — official names, descriptions and grades, a guide to each in our own words with its sources, a roadmap to the platinum, and a tracker that saves your progress.</p>
+  <div class="progress-wrap">
+    <div class="progress-line"><span id="progressText">0 of 55 earned</span><span id="percentText">0%</span></div>
+    <div class="bar"><div class="fill" id="progressFill" style="width:0%"></div></div>
+    <p class="counts" id="gradeCounts"></p>
+    <p class="counts dim" id="listFacts">55 trophies: 1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze &middot; 28 hidden until earned &middot; 0 online trophies</p>
+  </div>
+</header>
+
+<main>
+  <nav class="jumpnav" aria-label="Sections">
+    <a href="#roadmap">Roadmap to the platinum</a>
+    <a href="#missables">Missable trophies</a>
+    <a href="#listHeading">Checklist</a>
+  </nav>
+  <section class="controls" aria-label="Tracker controls">
+    <label class="field">Search <input id="search" type="search" placeholder="Search trophy names and guides…"></label>
+    <label class="field">Kind
+      <select id="kind">
+        <option value="all">All kinds</option>
+        <option value="story">Story</option>
+        <option value="side">Side characters</option>
+        <option value="activity">Activities</option>
+        <option value="collectible">Collectibles</option>
+        <option value="exploration">Exploration</option>
+        <option value="completion">100% completion</option>
+        <option value="platinum">Platinum</option>
+        <option value="missable">Missable only</option>
+      </select>
+    </label>
+    <label class="field">Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="check"><input id="spoilers" type="checkbox"> Hide story spoilers until earned</label>
+    <label class="check"><input id="earnedOnly" type="checkbox"> Earned only</label>
+    <button id="export" type="button">Export progress</button>
+    <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+    <button id="reset" type="button">Reset progress</button>
+  </section>
+
+  <div class="layout">
+    <section class="list-col" aria-label="Trophy checklist">
+      <h2 id="listHeading">Checklist <span id="shownCount"></span></h2>
+      <p class="hint">Tick a trophy when you earn it — progress is saved in this browser. Click any trophy to open its guide.</p>
+      <ul id="rows" class="rows"></ul>
+    </section>
+
+    <aside class="detail-col" aria-label="Trophy detail">
+      <div id="detail" class="detail">
+        <h2>Guide</h2>
+        <p class="hint">Pick a trophy from the checklist to see its official description, our guide, and the sources behind it.</p>
+      </div>
+    </aside>
+  </div>
+
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p>Built from the official descriptions: story first, then the finale, then side strands and activities, then collectibles, then the 100% cleanup. One playthrough is enough — there are no difficulty trophies and no online trophies. Do not use cheats: they disable trophies and saving. Missions cannot be replayed, so keep a manual save at the start of every chapter and one before the final mission.</p>
+    <ol class="stages">
+      <li><strong>Stage 1 — Story, Chapter 1.</strong> Play the main missions to the end of Chapter 1. Meditate at the first meditation spot the moment it is offered (see Missables). Earn: Just Like Paradise, Paradise Lost, Trust.</li>
+      <li><strong>Stage 2 — Story, Chapter 2.</strong> Both protagonists are playable now and the world opens up. Start side strands and activities as they appear. Earn: T**s Ass Drug Money, Break the Bank, Family Matters.</li>
+      <li><strong>Stage 3 — Story, Chapter 3.</strong> Keep the story moving and keep clearing stranger strands. Earn: Vice City, Baby!, DWNFALL, Hi-Jacked.</li>
+      <li><strong>Stage 4 — Story, Chapter 4.</strong> Last full chapter. Before the finale, check the missables list and make a manual save. Earn: Top Of The World, Ma, Snow Storm.</li>
+      <li><strong>Stage 5 — Finale.</strong> Complete the final mission. Earn: You Gotta Know When to Get Off (gold), Actions Speak Louder.</li>
+      <li><strong>Stage 6 — Side characters &amp; strangers.</strong> Finish every stranger strand (8 strands for the silver) and the final mission for Andy, Kenton, Billy, Randy and Tyrone, plus Bret's hunt and every meditation spot.</li>
+      <li><strong>Stage 7 — Activities &amp; challenges.</strong> Races (20 wins), drone races, shooting range golds (42 challenges), 250 stunts, 50 challenges, robberies (shops, bank vaults, armored trucks, gang operations), and the money trophies ($250,000 laundered, $100,000 spent).</li>
+      <li><strong>Stage 8 — Collectibles &amp; exploration.</strong> Card sets (3), WAiNK It at 100 locations, 100 vehicles discovered, all garages bought, 10 vehicles registered, all of Leonida explored.</li>
+      <li><strong>Stage 9 — Cleanup &amp; 100%.</strong> Work the in-game 100% checklist (story, robberies, gang operations, collectibles, races, stunts, challenges, discoveries) until A Long Road (gold) pops — then the platinum, Vice Got a Price!, follows automatically.</li>
+    </ol>
+  </section>
+
+  <section class="missables" id="missables" aria-label="Missable trophies">
+    <h2>Missable trophies — read this first</h2>
+    <p>Only one trophy is flagged as possibly missable by the launch guides (PowerPyx and GTABase). Everything else on the list is earned by playing the story, repeating an activity, or exploring — but because missions cannot be replayed, a manual save at the start of every chapter is your safety net.</p>
+    <div id="missableList" class="missable-list"></div>
+    <p class="dim">Watch list: story-choice trophy Actions Speak Louder involves a decision — save before major story decisions. All other trophies are unmissable by the official descriptions.</p>
+  </section>
+
+  <section class="about" aria-label="About this guide">
+    <h2>About this guide</h2>
+    <p>Names, descriptions and grades are the official PlayStation list as published by PSNProfiles and Exophase (55 trophies: 1 platinum, 2 gold, 6 silver, 46 bronze; 28 hidden). Every guide is written in our own words for this entry and cites its sources beside it — a specific location or step with no cited source earns no credit here, so where the game had only just launched and no reliable source had pinned a step down, the guide says so plainly instead of inventing one. Progress is stored only in your browser (localStorage) and can be exported to a JSON file and imported back. This guide works fully offline and fetches nothing.</p>
+    <p class="dim">Not affiliated with Rockstar Games. No Rockstar logo, artwork, box art or game screenshots are used; the look is our own.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Legend — an offline GTA 6 trophy guide &amp; tracker. 55 trophies, one platinum.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

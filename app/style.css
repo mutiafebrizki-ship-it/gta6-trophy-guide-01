@@ -1,0 +1,126 @@
+/* Leonida Legend — dark neon Vice City look, drawn with CSS gradients only.
+   System font stack, no external fonts, no network requests. */
+:root {
+  --bg: #12081f;
+  --bg2: #1b1035;
+  --panel: #221640;
+  --panel2: #2a1b4d;
+  --ink: #f5eefc;
+  --muted: #c9b8e8;
+  --dim: #9d8bc4;
+  --line: #4a3480;
+  --pink: #ff2e88;
+  --orange: #ff6b4a;
+  --gold: #ffd166;
+  --teal: #2de1c2;
+  --silver: #c3c9cf;
+  --bronze: #c98b5e;
+  --radius: 14px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, #160a2a 0%, var(--bg) 30%, #0d0618 100%);
+  color: var(--ink);
+  line-height: 1.5;
+}
+.sun { max-width: 1200px; margin: 0 auto; }
+.sun svg { display: block; width: 100%; height: 120px; }
+.hero { max-width: 1080px; margin: 0 auto; padding: 4px 20px 10px; text-align: center; }
+.kicker { color: var(--gold); letter-spacing: 0.14em; text-transform: uppercase; font-size: 12px; margin: 6px 0; }
+h1 {
+  margin: 0;
+  font-size: 52px;
+  line-height: 1.05;
+  background: linear-gradient(90deg, var(--gold), var(--orange) 45%, var(--pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.tagline { max-width: 720px; margin: 10px auto 18px; color: var(--muted); font-size: 17px; }
+.progress-wrap { max-width: 720px; margin: 0 auto; }
+.progress-line { display: flex; justify-content: space-between; font-weight: 700; }
+.bar { height: 14px; border-radius: 999px; background: #33235e; border: 1px solid var(--line); overflow: hidden; margin-top: 6px; }
+.fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--orange), var(--pink)); transition: width 0.3s; }
+.counts { margin: 8px 0 0; font-size: 14px; }
+.counts.dim, .dim { color: var(--dim); }
+main { max-width: 1080px; margin: 0 auto; padding: 0 20px 30px; }
+h2 { font-size: 24px; margin: 0 0 8px; color: var(--gold); }
+.jumpnav { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin: 4px 0 0; }
+.jumpnav a { color: var(--teal); font-weight: 700; font-size: 14px; }
+.controls {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: end;
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 14px; margin: 18px 0;
+}
+.field { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); font-weight: 600; }
+.field input, .field select {
+  background: var(--bg2); color: var(--ink); border: 1px solid var(--line);
+  border-radius: 8px; padding: 8px 10px; font-size: 15px; min-width: 150px;
+}
+.field input[type="search"] { min-width: 240px; }
+.check { display: flex; gap: 6px; align-items: center; font-size: 14px; padding-bottom: 8px; }
+button, .import {
+  background: linear-gradient(90deg, var(--orange), var(--pink));
+  color: #fff; border: 0; border-radius: 8px; padding: 9px 14px;
+  font-size: 14px; font-weight: 700; cursor: pointer;
+}
+button:hover, .import:hover { filter: brightness(1.15); }
+.import input { display: none; }
+#reset { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+.layout { display: grid; grid-template-columns: 1.25fr 1fr; gap: 18px; align-items: start; }
+.hint { color: var(--dim); font-size: 14px; margin: 4px 0 12px; }
+.rows { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.row {
+  display: flex; gap: 10px; align-items: flex-start; text-align: left;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  padding: 10px 12px; cursor: pointer; color: var(--ink); width: 100%; font: inherit;
+}
+.row:hover { border-color: var(--pink); }
+.row.selected { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+.row.earned { opacity: 0.75; }
+.row input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--pink); flex: none; }
+.row .body { flex: 1; min-width: 0; }
+.row .name { font-weight: 700; font-size: 15px; }
+.row.earned .name { text-decoration: line-through; }
+.row .desc { color: var(--muted); font-size: 13.5px; }
+.badge {
+  flex: none; font-size: 11px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.06em; padding: 3px 8px; border-radius: 999px; margin-top: 2px;
+}
+.badge.platinum { background: #e8f4ff; color: #1b1035; }
+.badge.gold { background: var(--gold); color: #3a2a00; }
+.badge.silver { background: var(--silver); color: #222; }
+.badge.bronze { background: var(--bronze); color: #2a1503; }
+.flag { display: inline-block; font-size: 11px; font-weight: 800; color: #ffb3c8; border: 1px solid var(--pink); border-radius: 999px; padding: 1px 7px; margin-left: 6px; }
+.flag.hidden-flag { color: var(--teal); border-color: var(--teal); }
+.detail {
+  position: sticky; top: 12px;
+  background: var(--panel2); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 18px;
+}
+.detail h3 { margin: 0 0 4px; font-size: 22px; }
+.detail .meta { color: var(--muted); font-size: 14px; margin: 2px 0 10px; }
+.detail .official { background: var(--bg2); border-left: 3px solid var(--gold); padding: 10px 12px; border-radius: 0 8px 8px 0; margin: 10px 0; }
+.detail .guide-text { font-size: 15.5px; }
+.detail h4 { margin: 14px 0 6px; color: var(--gold); font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; }
+.sources { margin: 0; padding-left: 18px; font-size: 13.5px; color: var(--muted); }
+.sources a { color: var(--teal); overflow-wrap: anywhere; }
+.roadmap, .missables, .about {
+  margin-top: 26px; background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 20px 22px;
+}
+.stages { margin: 10px 0 0; padding-left: 22px; }
+.stages li { margin-bottom: 10px; }
+.stages strong { color: var(--gold); }
+.missable-list { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.missable-card { background: #3a1030; border: 1px solid var(--pink); border-radius: 12px; padding: 12px 14px; }
+.missable-card .name { font-weight: 800; }
+footer { text-align: center; color: var(--dim); font-size: 13px; padding: 10px 20px 30px; }
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+  .detail { position: static; }
+  h1 { font-size: 38px; }
+  .sun svg { height: 80px; }
+}
